@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+
+
+<link rel="stylesheet" href="styles.css">
+<!-- add styles for phone-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.5.6/css/intlTelInput.css" />
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+</head>
+<body>
+
+  <div class="form-container">
+<h1>Contact us</h1>
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dd200000SItsL" method="POST">
+
+<input type=hidden name='captcha_settings' value='{"keyname":"WB","fallback":"true","orgId":"00Dd200000SItsL","ts":""}'>
+<input type=hidden name="oid" value="00Dd200000SItsL">
+<input type="hidden" name="retURL" value="/thankyou.html">
+
+
+
+<div class="form-group">
+<label for="company">Company</label>
+<input  id="company" maxlength="40" name="company" size="20" type="text" required /></div>
+
+<div class="form-group name-fields">
+  <div class="form-group">
+<label for="first_name">First Name</label>
+<input  id="first_name" maxlength="40" name="first_name" size="20" type="text" pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$" 
+       title="Please use only letters, spaces and hyphes" required />
+      </div>
+
+  <div class="form-group">
+<label for="last_name">Last Name</label>
+<input  id="last_name" maxlength="80" name="last_name" size="20" type="text" pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$" 
+       title="Please use only letters, spaces and hyphes"  required />
+  </div>
+  </div>
+
+  <div class="form-group">
+<label for="email">Email</label>
+<input  id="email" maxlength="80" name="email" size="20" type="email" required />
+<p class="error-message" id="email-error">Please enter a valid email address.</p>
+  </div>
+
+  <div class="form-group">
+<label for="phone">Phone</label>
+<input  id="phone" name="phone" type="tel"
+       title="The phone numbers can only contain numbers, spaces, brackets and + - signs" required />
+</div>
+
+
+<div class="form-group">
+  <label for="00Nd200001Onl2o">Product</label>
+  <select  id="00Nd200001Onl2o" name="00Nd200001Onl2o" title="Product" required >
+<option value="">--Choose a product--</option>
+<option value="R001C1">Renault Logan</option>
+<option value="R002C2">Renault Logan Stepway</option>
+<option value="R003C3">Renault Sandero</option>
+<option value="R004C4">Renault Sandero Stepway</option>
+<option value="R005E1">K7M</option>
+<option value="R006E2">K4M</option>
+<option value="R007E3">H4M</option>
+<option value="HK001C1">Kia Rio</option>
+<option value="HK002C2">Kia Rio X-Line</option>
+<option value="HK003C3">Hyundai Accent</option>
+<option value="HK004C4">Hyundai Solaris</option>
+<option value="HK005E1">G4LC</option>
+<option value="HK006E2">G4FG</option>
+<option value="VAG001C1">Volkswagen Polo Sedan</option>
+<option value="VAG002C2">Volkswagen Polo 2021</option>
+<option value="VAG003C3">Skoda Rapid</option>
+<option value="VAG004E1">CZCA</option>
+<option value="VAG005E2">CFW</option>
+<option value="VAG006E3">CWVA</option>
+<option value="VAG007E4">CFNA</option>
+<option value="VAG008E5">CFNB</option>
+<option value="L001C1">Lada Vesta</option>
+<option value="L002C2">Lada Xray</option>
+<option value="L003E1">VAZ-21179</option>
+<option value="L004E2">VAZ-21129</option>
+<option value="R008A1">Carpets Renault</option>
+<option value="HK007A1">Carpets Hyundai</option>
+<option value="HK008A2">Carpets Kia</option>
+<option value="VAG009A1">Carpets Volkswagen</option>
+<option value="VAG010A2">Carpets Skoda</option>
+<option value="L005A1">Carpets Lada</option>
+<option value="MI001A1">Phone holder Xiaomi</option>
+</select>
+</div>
+
+
+<div class="recaptcha-group">
+<div class="g-recaptcha" 
+data-sitekey="6LflX_8rAAAAAFme8i3krkxab5wS0L80KJlwrnV4">
+</div>
+
+
+<input type="submit" name="submit">
+
+</form>
+</div>
+
+<script src="scripts.js"></script>
+<!-- script for the phone input field-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.5.6/js/intlTelInput.min.js"></script>
+
+</body>
+</html>
+
+
